@@ -1,0 +1,53 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.CustomersList" displayBlock="true">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                	<Carousel id="customersCarousel" height="50%" class="carouselClass">
+							<pages>
+								<Image width="90%" height="90%" src="https://www.zooplus.pl/magazyn/wp-content/uploads/2019/01/Samojed.jpg"/>
+								<Image width="90%" height="90%" src="https://static.fajnyzwierzak.pl/media/uploads/media_image/original/wpis/10/cena-maltanczyka.jpg"/>
+								<!-- <Image width="90%" height="90%" src="https://static.fajnyzwierzak.pl/media/uploads/media_image/original/wpis/10/cena-maltanczyka.jpg"/> -->
+							</pages>
+							<customLayout>
+								<CarouselLayout visiblePagesCount="3"/>
+							</customLayout>
+						</Carousel>
+                         <Button text="Create Customer" press="onCreateCustomer" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom">
+                        </Button>
+                         <Button text="Performance" press="onPerformance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom">
+                        </Button>
+						<Table items="{/Customers}">
+							<columns>
+								<Column>
+									<header>
+										<Label text="Company Name" id="label0"/>
+									</header>
+								</Column>
+								<Column>
+									<header>
+										<Label text="Country"/>
+									</header>
+								</Column>
+                                		<Column>
+									<header>
+										<Label text="Customer ID"/>
+									</header>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem type="Navigation" press="onCustomerPress">
+									<Text text="{CompanyName}"/>
+									<Text text="{Country}"/>
+                                    <Text text="{CustomerID}"/>
+	
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

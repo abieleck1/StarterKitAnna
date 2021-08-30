@@ -1,0 +1,40 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="stk.starterkit.controller.Performance" displayBlock="true">
+	<Page id="Performance" showNavButton="true" navButtonPress="handleNavButtonPress" title="Performance" xmlns:cd="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" cd:w5g.dt.context="/Employees">
+        <!-- <Table items="{path:'/Orders', parameters:{expand: 'Employee'}}"> -->
+        <Table items="{path:'/Employees', parameters:{expand:'Orders'}}">
+			<columns>
+				<Column>
+					<header>
+						<Label text="Name"/>
+					</header>
+				</Column>
+				<Column>
+					<header>
+						<Label text="Position"/>
+					</header>
+				</Column>
+				<Column>
+					<header>
+						<Label text="Orders"/>
+					</header>
+				</Column>
+                	<Column>
+					<header>
+						<Label text="Actions" class="sapUiMediumMarginBegin"/>
+					</header>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+                     <Text text="{FirstName} {LastName}"/>
+                    <Text text="{Title}"/>
+					    <Text text="{parts: [{path: 'Orders'}], formatter: '.formatter.formatOrdersNum'}"/>
+                        <FlexBox>
+                            <Button text="Motivate" press="onMotivate" class="blueColor"/>
+                            <Button text="Fire" press="onFire" class="sapUiMediumMarginBegin blueColor"/>
+                        </FlexBox> 
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>
