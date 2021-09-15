@@ -20,9 +20,9 @@
                     "localUri": "localService/metadata.xml"
                 }
             },
-            "secondaryService":{
-                "uri":"generate_insult.php",
-                "type":"JSON"
+            "secondaryService": {
+                "uri": "generate_insult.php",
+                "type": "JSON"
             }
         }
     },
@@ -118,6 +118,13 @@
                     "target": [
                         "Performance"
                     ]
+                },
+                {
+                    "name": "CreateCustomer",
+                    "pattern": "CreateCustomer",
+                    "target": [
+                        "CreateCustomer"
+                    ]
                 }
             ],
             "targets": {
@@ -132,6 +139,10 @@
                 "Performance": {
                     "viewType": "XML",
                     "viewName": "Performance"
+                },
+                "CreateCustomer": {
+                    "viewType": "XML",
+                    "viewName": "CreateCustomer"
                 }
             }
         }

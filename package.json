@@ -19,6 +19,7 @@
         "deploy-config": "fiori add deploy-config",
         "unit-tests": "fiori run --open test/unit/unitTests.qunit.html",
         "int-tests": "fiori run --open test/integration/opaTests.qunit.html",
+        "tests": "fiori run --open test/testsuite.qunit.html",
         "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateManifestBundle generateCachebusterInfo",
         "build:mta": "rimraf resources mta_archives && mbt build --mtar archive",
         "undeploy": "cf undeploy stk-starterkit --delete-services --delete-service-keys"

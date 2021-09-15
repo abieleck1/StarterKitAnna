@@ -1,16 +1,16 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/m/MessageToast"
-    // "stk/starterkit/model/formatter"
+    "sap/m/MessageToast",
+    "stk/starterkit/model/formatter"
 ],
 	/**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, MessageToast) {
+    function (Controller, MessageToast, Formatter) {
         "use strict";
 
         return Controller.extend("stk.starterkit.controller.Performance", {
-            // formatter: Formatter,
+            formatter: Formatter,
 
 
             onInit: function () {

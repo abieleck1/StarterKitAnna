@@ -14,7 +14,7 @@
 								<CarouselLayout visiblePagesCount="3"/>
 							</customLayout>
 						</Carousel>
-                         <Button text="Create Customer" press="onCreateCustomer" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom">
+                         <Button text="{i18n>createCustomer}" press="onCreateCustomer" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom">
                         </Button>
                          <Button text="Performance" press="onPerformance" class="sapUiMediumMarginBegin sapUiTinyMarginTopBottom">
                         </Button>

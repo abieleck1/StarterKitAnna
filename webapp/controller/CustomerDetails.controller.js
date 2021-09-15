@@ -1,15 +1,15 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-    // "stk/starterkit/model/formatter"
+    "sap/ui/core/mvc/Controller",
+    "stk/starterkit/model/formatter"
 ],
 	/**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, Formatter) {
         "use strict";
 
         return Controller.extend("stk.starterkit.controller.CustomerDetails", {
-                // formatter: Formatter,
+                formatter: Formatter,
 
             onInit: function () {
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -38,7 +38,7 @@ sap.ui.define([
             
             _getDialog: function () {
                 if (!this._oDialog) {
-                    this._oDialog = sap.ui.xmlfragment("stk.starterkit.view.ContactInfoDialog.", this);
+                    this._oDialog = sap.ui.xmlfragment("stk.starterkit.view.ContactInfoDialog", this);
                     this.getView().addDependent(this._oDialog);
                 }
                 return this._oDialog;

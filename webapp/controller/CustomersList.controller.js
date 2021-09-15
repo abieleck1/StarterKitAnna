@@ -19,11 +19,11 @@ sap.ui.define([
                     CustomerID: selectedCustomerId
                 });
             },
-            // onCreateCustomer: function(oEvent){
-            //     var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            //     oRouter.navTo("CreateCustomer", {
-            //     });
-            // },
+            onCreateCustomer: function(oEvent){
+                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                oRouter.navTo("CreateCustomer", {
+                });
+            },
 
             onPerformance: function(oEvent){
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
